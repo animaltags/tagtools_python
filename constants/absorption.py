@@ -25,7 +25,7 @@ def absorption(f=None, T=None, d=None):
     """
     absp = []
     if not f:
-        print(help(absorption))
+        help(absorption)
         return absp
         return
     if not d:
