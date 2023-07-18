@@ -24,10 +24,11 @@ def norm2(X):
     
     if isinstance(X, np.ndarray):
         sizearray = X.shape
-        
+        # If X is a vector (row or column), v is the vector norm.
         if sizearray[0] == 1 or sizearray[1] == 1:
             v = np.sqrt(np.sum(X**2))
         else:
+            # If X is a matrix, v is the matrix norm.
             v = np.sqrt(np.sum(np.abs(X)**2, axis=1))
     
     elif isinstance(X, np.ndarray) and not isinstance(X, list):
